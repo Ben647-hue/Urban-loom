@@ -1,0 +1,311 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.nav_link{
+  background-color: grey;
+  padding: 50px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav_link:hover{
+  background-color: black;
+}
+
+.product_img{
+  object-fit: contain;
+  width: 100%;
+  height: 200px;
+  
+  display: block;
+
+}
+
+.eye-catching-message {
+    background: linear-gradient(135deg, #ff6a00, #ffb347); /* vibrant gradient */
+    color: #fff;                                         /* white text */
+    padding: 20px;                                       /* good spacing */
+    border-radius: 12px;                                 /* rounded corners */
+    text-align: center;                                  /* center text */
+    font-size: 28px;                                     /* big font */
+    font-family: "Arial Black", Gadget, sans-serif;     /* bold, strong font */
+    font-weight: 700;                                    /* bold weight */
+    margin-bottom: 25px;                                 /* spacing below */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);             /* subtle shadow */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);           /* text shadow for pop */
+}
+
+
+/* Carousel image */
+.carousel-img {
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(0.85); /* dim image for better text contrast */
+  transition: transform 1s ease, filter 0.8s ease;
+}
+
+.carousel-item:hover .carousel-img {
+  transform: scale(1.12);
+  filter: brightness(0.9);
+}
+
+/* Caption container */
+.colourful-caption {
+  background: rgba(0, 0, 0, 0.45); /* dark overlay for text readability */
+  backdrop-filter: blur(6px); /* subtle blur */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  animation: fadeSlide 1s ease;
+}
+
+/* Heading */
+.carousel-caption h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffd700; /* golden color for premium look */
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+  margin-bottom: 10px;
+}
+
+/* Paragraph */
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+/* Features list */
+.features {
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffe;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.carousel-caption .btn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Badge style */
+.badge {
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+/* Smooth fade slide animation */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animate caption elements */
+.carousel-caption h1,
+.carousel-caption p,
+.carousel-caption .features,
+.carousel-caption button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 4px #000);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  .carousel-caption p, .features {
+    font-size: 1rem;
+  }
+  .carousel-caption {
+    padding: 15px;
+  }
+}
+.carousel-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.carousel-slide{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+.product-card img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.btn-logout{
+    margin-left:12px; 
+    background: rgba(255,255,255,0.15); 
+    border: 1.5px solid rgba(255,255,255,0.5); 
+    border-radius: 30px; 
+    color: #fff; 
+    padding: 6px 16px; 
+    font-weight: 700px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    gap: 6; 
+    backdrop-filter: blur(6px);
+}
+/* =========================
+   DARK MODE
+   ========================= */
+
+html.dark,
+html.dark body {
+  background-color: #121212 !important;
+  color: #ffffff;
+}
+
+/* Navbar */
+html.dark .offer-navbar {
+  background-color: #1e1e1e !important;
+}
+
+html.dark .navbar-brand {
+  color: #ffffff !important;
+}
+
+html.dark .nav-link {
+  color: #ffffff !important;
+}
+
+html.dark .nav-link:hover {
+  color: #ffb347 !important;
+}
+
+/* Main content */
+html.dark .container {
+  color: #ffffff;
+}
+
+/* Product cards */
+html.dark .product-card {
+  background-color: #1e1e1e !important;
+  color: #ffffff;
+  border-color: #333;
+}
+
+/* General cards */
+html.dark .card {
+  background-color: #1e1e1e !important; 
+  color: #ffffff;
+  border-color: #333;
+}
+
+/* Headings and text */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark p {
+  color: #ffffff;
+}
+
+/* Forms */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #555;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #aaa;
+}
+
+/* Theme button */
+.theme-button {
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.theme-button:hover {
+  transform: scale(1.15);
+}

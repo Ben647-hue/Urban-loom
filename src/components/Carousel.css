@@ -1,0 +1,142 @@
+
+/* =========================
+   CAROUSEL
+========================= */
+
+#mycarousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+#mycarousel .carousel-inner {
+  width: 100%;
+}
+
+#mycarousel .carousel-item {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* All carousel images */
+#mycarousel .carousel-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Make the caption readable over the image */
+#mycarousel .colourful-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 70px 20px 35px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.45),
+    transparent
+  );
+}
+
+/* Caption heading */
+#mycarousel .colourful-caption h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Caption text */
+#mycarousel .colourful-caption p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+#mycarousel .features {
+  font-weight: 600;
+}
+
+/* Buttons */
+#mycarousel .carousel-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Remove inline cursor styling */
+#mycarousel .carousel-item {
+  cursor: pointer;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 768px) {
+  #mycarousel .carousel-item {
+    height: 400px;
+  }
+
+  #mycarousel .colourful-caption {
+    padding: 50px 15px 25px;
+  }
+
+  #mycarousel .colourful-caption h1 {
+    font-size: 1.7rem;
+  }
+
+  #mycarousel .colourful-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   PHONES
+========================= */
+
+@media (max-width: 480px) {
+  #mycarousel .carousel-item {
+    height: 300px;
+  }
+
+  #mycarousel .carousel-img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #mycarousel .colourful-caption {
+    padding: 35px 10px 15px;
+  }
+
+  #mycarousel .colourful-caption h1 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+  }
+
+  #mycarousel .colourful-caption p {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+
+  #mycarousel .features {
+    display: none;
+  }
+
+  #mycarousel .carousel-btn-group {
+    margin-top: 8px;
+    gap: 5px;
+  }
+
+  #mycarousel .carousel-btn-group .btn {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}
+

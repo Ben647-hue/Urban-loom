@@ -7,7 +7,7 @@ const AboutUs = () => {
   const navigate = useNavigate();
 
   const handleExplore = () => {
-    navigate("/addproduct");
+    navigate("/");
   };
 
   return (

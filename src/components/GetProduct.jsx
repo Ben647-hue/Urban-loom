@@ -1499,11 +1499,14 @@ const GetProducts = () => {
                       className="btn btn-warning"
                       onClick={(e) => {
                         e.stopPropagation();
+                        products.length === 0 && handleNav("/addproduct")
                         products.length > 0 &&
                           handleNav("/makepayment", {
                             state: { product: products[0] },
                           });
                       }}
+                      
+                      
                     >
                       Shop Now
                     </button>
@@ -1725,7 +1728,9 @@ const GetProducts = () => {
           <button
             className={`tag ${selectedCategory === "Shoes" ? "active" : ""}`}
             onClick={() => setSelectedCategory("Shoes")}
-          ></button>
+          >
+            Shoes
+          </button>
         </div>
       </div>
       {/* PRODUCTS SECTION */}
@@ -1982,11 +1987,11 @@ const GetProducts = () => {
 
             <button
               className={`chat-chip ${
-                selectedCategory === "Shirts" ? "active" : ""
+                selectedCategory === "Mens Wear" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("Shirts")}
+              onClick={() => setSelectedCategory("Mens wear")}
             >
-              👕 Shirts
+              👕 Mens Wear
             </button>
 
             <button
@@ -2000,11 +2005,19 @@ const GetProducts = () => {
 
             <button
               className={`chat-chip ${
-                selectedCategory === "Electronics" ? "active" : ""
+                selectedCategory === "Ladies Wear" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("Electronics")}
+              onClick={() => setSelectedCategory("Ladies Wear")}
             >
-              📱 Electronics
+              👚Ladies Wear
+            </button>
+             <button
+              className={`chat-chip ${
+                selectedCategory === "Kids Wear" ? "active" : ""
+              }`}
+              onClick={() => setSelectedCategory("Kids Wear")}
+            >
+             🧒Kids Wear
             </button>
           </div>
 

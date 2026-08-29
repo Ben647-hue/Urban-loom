@@ -67,7 +67,7 @@ const Location = () => {
                 🗺️ Get Directions to Village Market
               </a>
                 <button
-              className="btn-logout"
+              className="btn-back"
               onClick={() => navigate("/")}
             >
               Go Back

@@ -22,6 +22,16 @@ const AddProduct = () => {
     }
   }, [navigate]);
 
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    useEffect(() => {
+      localStorage.setItem("theme", theme);
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    }, [theme]);
+
 
 
   const handleFileChange = (e) => {
@@ -96,7 +106,7 @@ const AddProduct = () => {
               type="text"
               className="form-control mb-3"
               placeholder="Product Name"
-              required
+              
               value={product_name}
               onChange={(e) => setProduct_name(e.target.value)}
             />

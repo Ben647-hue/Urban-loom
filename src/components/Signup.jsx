@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "./logout.css"
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -145,6 +146,13 @@ const Signup = () => {
             <p className="text-center mt-3 small">
               Already have an account? <Link to="/signin" className="fw-semibold text-decoration-none text-warning">Sign In</Link>
             </p>
+
+            <button
+              className="btn-back"
+              onClick={() => navigate("/")}
+            >
+              Go Back
+            </button>
           </form>
         </div>
       </div>
